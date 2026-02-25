@@ -5,6 +5,17 @@
   --color-foreground: #ffffff;
   --color-muted: #666666;
   --color-muted-light: #999999;
+  --color-card: #111111;
+  --color-card-border: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-hover: rgba(255, 255, 255, 0.1);
+  --color-accent: #ffffff;
+  --color-accent-foreground: #000000;
+  --color-muted-bg: rgba(255, 255, 255, 0.02);
+  --color-muted-bg-hover: rgba(255, 255, 255, 0.05);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.5);
+  --color-text-tertiary: rgba(255, 255, 255, 0.4);
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
 }
@@ -35,7 +46,7 @@ a, button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
