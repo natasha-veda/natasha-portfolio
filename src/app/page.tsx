@@ -10,6 +10,7 @@ const baseAddress = "0x4Dc57350E7Dc03B4CFEF2B8847089F63C4040B5B"
 const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#stack', label: 'Stack' },
+  { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Projects' },
   { href: '/blog', label: 'Blog' },
   { href: '#contact', label: 'Contact' },
@@ -22,6 +23,30 @@ const stack = [
   { name: 'Rust', desc: 'High-performance systems' },
   { name: 'Node.js', desc: 'Backend & APIs' },
   { name: 'PostgreSQL', desc: 'Database design' },
+]
+
+const services = [
+  {
+    title: 'Code Review',
+    desc: 'I\'ll review your code and provide detailed feedback on improvements, best practices, and potential bugs.',
+    price: '₹500',
+    timeframe: 'Within 24 hours',
+    emoji: '🔍'
+  },
+  {
+    title: 'Bug Fixing',
+    desc: 'Send me your bug description and I\'ll help you find and fix the issue. Chat-based debugging.',
+    price: '₹300',
+    timeframe: 'Within 2 hours',
+    emoji: '🐛'
+  },
+  {
+    title: 'Project Planning',
+    desc: 'Need help architecting your next project? I\'ll help you plan tech stack, database schema, and API design.',
+    price: '₹700',
+    timeframe: 'Within 24 hours',
+    emoji: '📐'
+  },
 ]
 
 const projects = [
@@ -147,8 +172,8 @@ export default function Home() {
             </p>
 
             <div className="flex gap-3 pt-2">
-              <a href="#projects" className="inline-flex items-center px-5 py-2.5 bg-accent text-accent-foreground rounded-lg font-medium text-sm hover:opacity-90 transition-colors">
-                View Projects
+              <a href="#services" className="inline-flex items-center px-5 py-2.5 bg-accent text-accent-foreground rounded-lg font-medium text-sm hover:opacity-90 transition-colors">
+                Hire Me
               </a>
               <a href="#contact" className="inline-flex items-center px-5 py-2.5 border border-border-subtle text-text-secondary rounded-lg font-medium text-sm hover:bg-muted-bg transition-colors">
                 Get in Touch
@@ -187,6 +212,30 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Services */}
+        <section id="services" className="max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-20 border-t border-border-subtle">
+          <h2 className="text-sm font-medium text-text-tertiary uppercase tracking-widest mb-4">Services</h2>
+          <p className="text-text-secondary mb-8">Chat-based coding help. Pay via crypto or UPI.</p>
+          
+          <div className="grid md:grid-cols-3 gap-4">
+            {services.map((service) => (
+              <div key={service.title} className="p-5 rounded-xl bg-muted-bg border border-border-subtle hover:border-border-hover transition-colors">
+                <div className="text-2xl mb-3">{service.emoji}</div>
+                <h3 className="font-medium mb-2">{service.title}</h3>
+                <p className="text-text-tertiary text-sm mb-4">{service.desc}</p>
+                <div className="flex items-baseline justify-between">
+                  <span className="text-lg font-semibold">{service.price}</span>
+                  <span className="text-text-tertiary text-xs">{service.timeframe}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-text-tertiary text-sm mt-6 text-center">
+            DM on Telegram to book: <a href="https://t.me/saurra3h" className="text-foreground underline">@saurra3h</a>
+          </p>
         </section>
 
         {/* Projects */}
