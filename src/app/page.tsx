@@ -13,7 +13,7 @@ const navLinks = [
   { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Projects' },
   { href: '/blog', label: 'Blog' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/dashboard', label: 'Dashboard' },
 ]
 
 const stack = [
